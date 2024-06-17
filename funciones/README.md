@@ -212,6 +212,12 @@ Estas son solo algunas de las muchas funciones internas útiles que Python propo
 
 ## TIPOS DE FUNCIONES
 ### FUNCIONES ANONIMAS (FUNCIONES LAMBDA)
+`lambda:"hola"
 ### FUNCIONES CLOSURE
+una funcion que dentro tiene otra funcion
+def saludo(nombre)
+   print(f"bienvenido{nombre}")
 ### FUNCIONES CALLBACK
+funciones que reciben por parametro otra funcion
+`int(input("ingrese un numero:))`
 ### PROGRAMACION FUNCIONAL
