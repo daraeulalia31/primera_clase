@@ -23,30 +23,20 @@ print(num_pares(8,5,4,7,9,25,4,7,12))
 #calcular en numero mayor
 #calcular la suma de todo los numeros 
 #se le pasara por argumento n numeros
-
-  def calcular_estadisticas(*args):
-    if not args:
-        return 0, 0, 0
-
-    numero_menor = args[0]
-    numero_mayor = args[0]
-    suma_total = 0
-
-    for num in args:
-        if num < numero_menor:
-            numero_menor = num
-        if num > numero_mayor:
-            numero_mayor = num
-        suma_total += num
-
-    return numero_menor, numero_mayor, suma_total
-
-# Ejemplo de uso
-numeros = 10, 5, 8, 3, 12
-numero_menor, numero_mayor, suma_total = calcular_estadisticas(*numeros)
-
-print("Número menor:", numero_menor)  # Salida: 3
-print("Número mayor:", numero_mayor)  # Salida: 12
-print("Suma de todos los números:", suma_total)  # Salida: 38
-
-
+def min(**args):
+    menor=args[0]
+    for n in args:
+def max(*args):
+    mayor=args[0]
+    for n in args:
+          if n>mayor:  
+    return mayor                        
+def sum(*args):
+    suma=0
+    for n in args:
+       suma+=n
+       return suma
+valores=4,7,8,5,2,1
+print(min(*valores))
+print(max(*valores))
+print(sum(*valores))                          

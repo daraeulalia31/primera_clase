@@ -49,3 +49,15 @@ return dict(
     edad=edad
 )
 print(persona(nombre,edad))                        
+
+Def suma(*args):
+    nueva_lista=list(args)
+    nueva_lista=
+    print(args)
+suma (4,7,8,5,2,4)
+#empaquetado y desemppaquetado de argumentos nominales 
+def alumnos(**kwargs):
+    kwargs["nombre"]="abel"
+    print(kwargs)
+alumnos(nombre="miguel",apellido="largo",edad=30)
+
