@@ -29,7 +29,7 @@ def saludo():
     #print(f"{saludo}, {saludo_dos})
 print(saludo())
 # saludo()
-## invocar una funcion 
+## INVOCAR FUNCIONES
 para invocar una funcion (o llamar, ejecutar) una funcion solo tendremos que escribir el 'nombre' de la funcion seguido por '()' parantesis
 '''python
 def saludo():
@@ -37,7 +37,7 @@ def saludo():
 # invocar la funcion
 saludo()
 '''
-## retornar un valor 
+## RETORMAR VALOR 
 las funciones pueden retornar (o devolver) un valor.
 '''python
 def uno():
@@ -49,7 +49,7 @@ no confundir 'print()' con 'return', el valor retornado por 'return' nos permite
 el literal por terminal.
 **ejemplo**
 *en el archivo 'lecture.py'
-## Retornando multiples valores
+## RETORNANDO MULTIPLES VALORES
  el secreto es hacerlo mediante un un tipo de dato estructurado.
  '''python
  def varios():
@@ -66,7 +66,7 @@ return - tipo de datos
          tipo de dato estructurado
 print - mensaje 
 '''
-## parametros y argumentos 
+## PARAMETROS Y ARGUMENTOS 
 si una funcion no dispusiera de valores de entreda estaria limitada en su actuacion.
 es por ello que los 'parametros' no permiten variar los datos que consume una funcion 
 para obtener distintos resultados
@@ -85,7 +85,7 @@ def ejem(a,b,c):
     return a+b+c
     ejem(4,5,6)
 ```
-### argumentos nominales
+### ARGUMENTOS NOMINALEA
 en est aproximacion loa argumentos no son copiados en un orden especifico sino que 
 **se asiganan por nombre a cada parametro**. ellos nos permite evitar el problema de 
 conocer o recordar cual es el orden de los parametros de la defincion de la funcion.
@@ -117,7 +117,7 @@ def build_cpu(familia,num_core,frecuencia):
 # haciendo uso de argumentos posicionales
 bull_cup("intel", 4,2,7)
 
-### parametros por defecto
+### PARAMETROS POR DEFECTO
 es posible especificar **valores por defecto** en los parametros de una funcion, en el caso de que no se 
 proporcione en valor el argumento en la llamada a la funcion, el parametro correspondiente tomara el valor
 defimido por defecto.
@@ -208,6 +208,10 @@ print(max(numeros))  # Salida: 20
 print(min(numeros))  # Salida: 5
  
  
-Estas son solo algunas de las muchas funciones internas útiles que Python proporciona de forma predeterminada. Puedes explorar más funciones internas en la documentación oficial de Python.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+Estas son solo algunas de las muchas funciones internas útiles que Python proporciona de forma predeterminada. Puedes explorar más funciones internas en la documentación oficial de Python.                                                                                                                                        
 
-
+## TIPOS DE FUNCIONES
+### FUNCIONES ANONIMAS (FUNCIONES LAMBDA)
+### FUNCIONES CLOSURE
+### FUNCIONES CALLBACK
+### PROGRAMACION FUNCIONAL
