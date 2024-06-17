@@ -1,4 +1,4 @@
-# funciones
+# FUNCIONES
 matematicamente una funcion es una ioperacion que toma uno o mas valores llamados a ´argumentos´ y produce un valor denominado ´resultado´
 # FUNCIONES
 matematicamente una funcion es una operacion 
@@ -11,7 +11,7 @@ funciones incorporadas (funciones internas), y funciones creadas por el usuario 
 en programacion una funcion es un subprograma, es una estrutura que nos permite agrupar codigo y sus principales objetivos son 
 -´no repetir´ fragmetos de codigos 
 -reutilizar´ el codigo en distitos esenarios 
-## estrutura de una funcion
+## ESTRUCTURA DE FUNCION
 ##definir una funcion en python
 para definir una funcion en paython primero utilizaremos la palabra reservada "def" seguida po el "nombre" de la funcion. a 
 continuacionespecificaremos los "parametros" con "()" si es una funcion con parametros, si se tuviera ,as de un parametros
@@ -128,7 +128,86 @@ def alumnos(nom,app,estado="aprobado"):
     alumonos("anthony","crucez","desaprobado")
 ```
 ## desempaquetado/empaquetado de argumentos(tarea)
+desempaquetado y empaquetado de argumentos se refiere a la forma en que se manejan los argumentos de una función en algunos lenguajes de programación, como Python.
+ 
+## Empaquetado de Argumentos:
+ 
+En el empaquetado de argumentos, se pueden pasar múltiples argumentos a una función como una sola variable. Esto se logra utilizando el operador  *  antes del nombre de la variable en la definición de la función. Por ejemplo:
+ 
+python
+ Copiar
+def sumar(*numeros):
+    total = 0
+    for num in numeros:
+        total += num
+    return total
+
+resultado = sumar(1, 2, 3, 4)
+print(resultado)  # Salida: 10
+ 
+ 
+En este ejemplo, la función  sumar  puede recibir cualquier cantidad de argumentos y los trata como una tupla llamada  numeros .
+ 
+## Desempaquetado de Argumentos:
+ 
+El desempaquetado de argumentos se utiliza cuando se quiere pasar una lista o tupla de valores como argumentos individuales a una función. Esto se logra utilizando el operador  *  antes del nombre de la lista o tupla al llamar a la función. Por ejemplo:
+ 
+python
+ Copiar
+def saludar(nombre, apellido):
+    return f"Hola {nombre} {apellido}!"
+
+datos = ["Juan", "Perez"]
+mensaje = saludar(*datos)
+print(mensaje)  # Salida: Hola Juan Perez!
+ 
+ 
+En este caso, la lista  datos  se desempaqueta y se pasa como dos argumentos individuales a la función  saludar .
+ 
+El empaquetado y desempaquetado de argumentos son útiles para trabajar con un número variable de argumentos en funciones y para pasar valores contenidos en listas o tuplas como argumentos individuales
+
 ## FUNCIONES INTRERNAS DE PYTHON(tareas)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    En Python, las funciones internas son funciones predefinidas en el lenguaje que están disponibles para su uso sin necesidad de importar ningún módulo adicional. Algunas de las funciones internas más comunes en Python son  print() ,  len() ,  type() ,  range() ,  max() ,  min() , entre otras.
+ 
+## Ejemplos de Funciones Internas de Python:
+ 
+ ## Función  print() : Imprime un mensaje en la consola.
+ 
+python
+ Copiar
+print("Hola, mundo!")
+ 
+## Función  len() : Devuelve la longitud de un objeto (por ejemplo, una lista, tupla, cadena, etc.).
+ 
+python
+ Copiar
+lista = [1, 2, 3, 4, 5]
+print(len(lista))  # Salida: 5
+
+## Función  type() : Devuelve el tipo de un objeto.
+ 
+python
+ Copiar
+numero = 10
+print(type(numero))  # Salida: <class 'int'>
+ 
+## Función  range() : Genera una secuencia de números.
+ 
+python
+ Copiar
+for i in range(1, 5):
+    print(i)
+# Salida: 1, 2, 3, 4
+ 
+## Función  max()  y  min() : Devuelven el valor máximo y mínimo de una secuencia de números.
+ 
+## python
+ Copiar
+numeros = [10, 5, 20, 15]
+print(max(numeros))  # Salida: 20
+print(min(numeros))  # Salida: 5
+ 
+ 
+Estas son solo algunas de las muchas funciones internas útiles que Python proporciona de forma predeterminada. Puedes explorar más funciones internas en la documentación oficial de Python.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 
 
