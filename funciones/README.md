@@ -213,11 +213,96 @@ Estas son solo algunas de las muchas funciones internas útiles que Python propo
 ## TIPOS DE FUNCIONES
 ### FUNCIONES ANONIMAS (FUNCIONES LAMBDA)
 `lambda:"hola"
+El término “función lambda” significa función anónima en Python. Para crear una función lambda, Python utiliza la palabra clave lambda. Una expresión lambda consiste en la palabra clave lambda seguida de una lista de argumentos, dos puntos y una única expresión (“expression”). En cuanto se llama la función lambda, se proporciona la expresión con los argumentos y se evalúa:
+
+lambda argument: expression
+Las funciones son una construcción lingüística fundamental de casi todos los lenguajes de programación y representan la unidad más pequeña de código reutilizable. Normalmente, las funciones en Python se definen con la palabra clave def. Por ejemplo, este también sería el caso de la función square que multiplica un número por sí mismo:
+
+# Define square function
+def square(num):
+    return num * num
+# Show that it works
+assert square(9) == 81
+python
+Además de la forma más conocida de definir funciones en Python mediante la palabra clave def, el lenguaje reconoce las “lambdas”. Estas son funciones breves y anónimas (es decir, sin nombre) que definen una expresión con parámetros. Puedes utilizar las lambdas en cualquier lugar donde se espere una función o se las pueda vincular a un nombre mediante una asignación. Aquí tienes la expresión lambda equivalente a la función square:
+
+# Create square function
+squared = lambda num: num * num
+# Show that it works
+assert squared(9) == 81
+
 ### FUNCIONES CLOSURE
+Un closure es la combinación de una función agrupada (dentro de otra) con referencias a su estado adyacente (el entorno léxico). En otras palabras, un closure te da acceso al alcance de una función externa desde una función interna. En JavaScript, los closure se crean cada vez que se crea una función, en el momento de la creación de la función.
 una funcion que dentro tiene otra funcion
 def saludo(nombre)
    print(f"bienvenido{nombre}")
+   function init() {
+  var name = "Mozilla"; // name es una variable local creada por init
+  function displayName() {
+    // displayName() es la función interna que forma el closure
+    console.log(name); // usar la variable declarada en la función padre
+  }
+  displayName();
+}
+init();
+init() crea una variable local llamada name y una función llamada displayName(). La función displayName() es una función interna que se define dentro de init() y está disponible solo dentro del cuerpo de la función init(). Tenga en cuenta que la función displayName() no tiene variables locales propias. Sin embargo, dado que las funciones internas tienen acceso a las variables de las funciones externas, displayName() puede acceder a la variable name declarada en la función principal, init().
+
+Ejecute el código utilizando este enlace de JSFiddle y observe que la instrucción console.log() dentro de la función displayName() muestra con éxito el valor de la variable name, que se declara en su función principal. Este es un ejemplo de ámbito léxico, que describe cómo un analizador resuelve los nombres de variables cuando las funciones están anidadas. La palabra léxico se refiere al hecho de que el ámbito léxico utiliza la ubicación donde se declara una variable dentro del código fuente para determinar dónde está disponible esa variable. Las funciones anidadas tienen acceso a variables declaradas en su ámbito externo.
+
 ### FUNCIONES CALLBACK
 funciones que reciben por parametro otra funcion
 `int(input("ingrese un numero:))`
+Una función de callback es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción.
+
+Ejemplo:
+
+JS
+Copy to Clipboard
+function saludar(nombre) {
+  alert("Hola " + nombre);
+}
+function procesarEntradaUsuario(callback) {
+  var nombre = prompt("Por favor ingresa tu nombre.");
+  callback(nombre);
+}
+
+procesarEntradaUsuario(saludar);
+
 ### PROGRAMACION FUNCIONAL
+La programación funcional (PF) es un paradigma de programación al igual que la programación orientada a objetos (POO). La PF se basa en cálculo lambda y concretamente en composición de funciones puras para modelar las soluciones de software. En cambio, la POO está más ligada a la programación imperativa y mutable (listado de instrucciones que se van ejecutando) que tienen mucha más relación con el modelo mental de Turing que hemos comentado.
+
+El desarrollo de software va de crear soluciones a problemas pequeños y después componerlos para solucionar un problema mayor. Es por eso que un modelo basado en funciones y en composición de las mismas como únicas herramientas para crear programas, nos brinda una forma muy elocuente de crear software.
+
+Planteemos por ejemplo el problema de querer incrementar un numero por 1. Podemos enfocar el problema creando una función que resuelva directamente el problema:
+
+const inc = x => x + 1;
+O podemos pensar en solucionar primero el problema de sumar dos números y después crear nuestra función inc mediante una composición:
+
+const add = x => y => x + y;
+const inc = add(1);
+Nuestra función add toma un valor X y devuelve una función que toma otro valor Y. Finalmente devuelve la suma de los dos números.
+
+La función inc es solo una composición (en este caso usando aplicación parcial) de add.
+
+Si mañana tenemos que crear más funciones ‘inc’, simplemente tendremos que seguir especlializando a la función add:
+
+const inc2 = add(2);
+const inc3 = add(3);
+Además, podemos crear funciones completamente nuevas componiendo varias ya existentes:
+
+const head = arr => arr[0];
+const splitBySpace = str => str.split(' ');
+const firstWord = compose(head, splitBySpace);
+const toUpperCase = str => str.toUpperCase();
+
+const toUpperCaseFirstWord = compose(toUpperCase, firstWord);
+
+toUpperCaseFirstWord('Hello World') // HELLO
+# ejemplo
+    if n < minimo:
+         minimo
+    return minimo
+# programacion funcional
+min(lista)
+```
+#### AVERIGUAR SOBRE MAP(). FILTER(), REDUCE()

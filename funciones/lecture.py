@@ -61,3 +61,25 @@ def alumnos(**kwargs):
     print(kwargs)
 alumnos(nombre="miguel",apellido="largo",edad=30)
 
+## EJEMPLOS DE LAMBDA
+saludo=lambda:"hola, {n} , {a}"
+print(saludo("ruth","castillo"))
+
+#crear un programa anonimo que reciba ccomo parametro una lista de 5 numeros y retorne dos listas una con los numeros pares y otra con numeros impares
+
+lista=[4,7,5,3,47,2,10,8,10]
+pares=lambda 1:[n for n in lista if n%2==0]
+impares=lambda 1:[n for n in lista if n%2!==0]
+print(pares(lista))
+print(impares(lista))
+tarea
+    
+int(input())
+    def mensaje(m):
+        print(n)
+    def pedir:nombre():
+        nombre=input("ingresa su nombre")
+        return nombre
+    mensaje(pedir_nombre())
+
+
