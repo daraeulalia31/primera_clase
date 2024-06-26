@@ -306,3 +306,77 @@ toUpperCaseFirstWord('Hello World') // HELLO
 min(lista)
 ```
 #### AVERIGUAR SOBRE MAP(). FILTER(), REDUCE()
+
+### MAP():
+Los Map en Javascript son estructuras de datos nativas que permiten implementar una estructura de tipo mapa, es decir, una estructuras donde tiene valores guardados a través de una clave para identificarlos. Comúnmente, esto se denomina pares clave-valor.
+```
+##EJEMPLO:
+
+const map = new Map();                                        // Map({}) (Mapa vacío)
+const map = new Map([[1, "uno"]]);                            // Map({ 1=>"uno" })
+const map = new Map([[1, "uno"], [2, "dos"], [3, "tres"]]);   // Map({ 1=>"uno", 2=>"dos", 3=>"tres" })
+
+En este ejemplo, creamos un elemento map, que no es más que un mapa de pares clave-valor. El primer map se define como un mapa vacío, el segundo, es un mapa con un solo elemento, y el tercero con 3 elementos. Para inicializar los mapas con datos, se introduce como parámetro un array de entradas (un array de arrays), que en nuestro tercer caso tiene estas combinaciones:
+
+Clave:  1 => Valor:  "uno"
+Clave:  2 => Valor:  "dos"
+Clave:  3 => Valor:  "tres"
+
+### FILTER():
+
+Tal como su nombre indica filter significa filtrar, y es una de mis funciones favoritas, ya que a partir de una lista o iterador y una función condicional, es capaz de devolver una nueva colección con los elementos filtrados que cumplan la condición.
+```
+#ejemplo:
+
+ef multiple(numero):    # Primero declaramos una función condicional
+    if numero % 5 == 0:  # Comprobamos si un numero es múltiple de cinco
+        return True      # Sólo devolvemos True si lo es
+
+numeros = [2, 5, 10, 23, 50, 33]
+
+filter(multiple, numeros)
+
+<filter at 0x257ac84abe0>
+Si ejecutamos el filtro obtenemos un objeto de tipo filtro, pero podemos transformarlo en una lista fácilmente haciendo un cast (conversión):
+
+
+list( filter(multiple, numeros) )
+
+[5, 10, 50]
+Por tanto cuando utilizamos la función filter() tenemos que enviar una función condicional, pero como recordaréis, no es necesario definirla, podemos utlizar una función anónima lambda:
+
+
+list( filter(lambda numero: numero%5 == 0, numeros) )
+
+[5, 10, 50]
+Así, en una sola línea hemos definido y ejecutado el filtro utilizando una función condicional anónima y una lista de numeros.
+```
+### REDUCE():
+El método de reducción en su forma más simple toma dos parámetros. El primer parámetro es una función, generalmente llamada reductora, que será llamada/invocada en cada valor del array. El segundo parámetro de reduce es el valor inicial que se utilizará en la función reductora.
+
+Ahora, la función reductora toma dos parámetros. El primer parámetro es el acumulador, que es el “valor” que irá atrapando el resultado de la función reductora, de modo que el acumulador será a lo que se reduzca el array. El segundo parámetro de la función reductora es el elemento actual en el array.
+
+Esto es, como habrás notado, bastante difícil de explicar en texto. Así que será mejor que veamos un ejemplo de código en el que intentamos obtener el precio total de una lista de artículos.
+```
+#ejemplo_
+
+
+const items = [
+  {nombre: "Arroz", precio: 5},
+  {nombre: "Libro", precio: 20},
+  {nombre: "Pollo", precio: 10},
+  {nombre: "Monitor", precio: 100},
+];
+
+const precioTotal = items.reduce((total, item) => {
+  return total + item.precio;
+}, 0);
+console.log(precioTotal); // 135
+
+// precioTotal también puede ser escrito así:
+const reducer = function (total, item) {
+  return total + item.precio;
+};
+const precioTotal = items.reduce(reducer, 0);
+console.log(precioTotal); // 135
+
