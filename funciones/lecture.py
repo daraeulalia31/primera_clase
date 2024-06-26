@@ -129,3 +129,5 @@ print(alumnos_actualizados)
 lista=[4,8,2,5,7,10,6,5,3,20]
 nueva_lista=list(filter(lambda x:x%2==0,lista))
 print(nueva_lista)
+lista_filtrada=list(filter(lambda x:x["edad"]<50,lista_alumnos))
+print(lista_filtrada)

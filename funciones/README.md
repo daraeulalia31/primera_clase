@@ -358,8 +358,7 @@ Ahora, la función reductora toma dos parámetros. El primer parámetro es el ac
 
 Esto es, como habrás notado, bastante difícil de explicar en texto. Así que será mejor que veamos un ejemplo de código en el que intentamos obtener el precio total de una lista de artículos.
 ```
-#ejemplo_
-
+#ejemplo
 
 const items = [
   {nombre: "Arroz", precio: 5},
