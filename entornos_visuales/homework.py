@@ -48,5 +48,6 @@ print(Sum(valores))
 #tarea
 #crear una lista de alumnos con los siguientes capos:
 #nombre, apelllido, edad, celular, email.
-#1: actualizar los registros con un campomas todos tendran el campo de estudios de enfermeria
+#1: actualizar los registros con un campos todos tendran el campo de estudios de enfermeria
 #2: buscar el segundo regsitro y actualizar su edad a 50 años.
+
