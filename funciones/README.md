@@ -28,13 +28,13 @@ def saludo():
     return F"{saludo}, {saludo_dos}
     #print(f"{saludo}, {saludo_dos})
 print(saludo())
-# saludo()
+# SALUDO() 
 ## INVOCAR FUNCIONES
 para invocar una funcion (o llamar, ejecutar) una funcion solo tendremos que escribir el 'nombre' de la funcion seguido por '()' parantesis
 '''python
 def saludo():
     print("hola")
-# invocar la funcion
+# INVOCAR LA FUNCION
 saludo()
 '''
 ## RETORMAR VALOR 
@@ -127,10 +127,10 @@ def alumnos(nom,app,estado="aprobado"):
     alumnos("ruth"."castillo")
     alumonos("anthony","crucez","desaprobado")
 ```
-## desempaquetado/empaquetado de argumentos(tarea)
+## DESEMPAQUETADO/EMPAQUETADO DE ARGUMENTOS (TAREA) 
 desempaquetado y empaquetado de argumentos se refiere a la forma en que se manejan los argumentos de una función en algunos lenguajes de programación, como Python.
  
-## Empaquetado de Argumentos:
+## EMPAQUETADO DE ARGUMRNTOS:
  
 En el empaquetado de argumentos, se pueden pasar múltiples argumentos a una función como una sola variable. Esto se logra utilizando el operador  *  antes del nombre de la variable en la definición de la función. Por ejemplo:
  
@@ -148,7 +148,7 @@ print(resultado)  # Salida: 10
  
 En este ejemplo, la función  sumar  puede recibir cualquier cantidad de argumentos y los trata como una tupla llamada  numeros .
  
-## Desempaquetado de Argumentos:
+## DESEMPAQUETADO DE ARGUMENTOS:
  
 El desempaquetado de argumentos se utiliza cuando se quiere pasar una lista o tupla de valores como argumentos individuales a una función. Esto se logra utilizando el operador  *  antes del nombre de la lista o tupla al llamar a la función. Por ejemplo:
  
@@ -169,7 +169,7 @@ El empaquetado y desempaquetado de argumentos son útiles para trabajar con un n
 ## FUNCIONES INTRERNAS DE PYTHON(tareas)
     En Python, las funciones internas son funciones predefinidas en el lenguaje que están disponibles para su uso sin necesidad de importar ningún módulo adicional. Algunas de las funciones internas más comunes en Python son  print() ,  len() ,  type() ,  range() ,  max() ,  min() , entre otras.
  
-## Ejemplos de Funciones Internas de Python:
+## EJEMPLOS DE FUNCION INTERNAS DE PYTHON:
  
  ## Función  print() : Imprime un mensaje en la consola.
  
@@ -211,6 +211,7 @@ print(min(numeros))  # Salida: 5
 Estas son solo algunas de las muchas funciones internas útiles que Python proporciona de forma predeterminada. Puedes explorar más funciones internas en la documentación oficial de Python.                                                                                                                                        
 
 ## TIPOS DE FUNCIONES
+
 ### FUNCIONES ANONIMAS (FUNCIONES LAMBDA)
 `lambda:"hola"
 El término “función lambda” significa función anónima en Python. Para crear una función lambda, Python utiliza la palabra clave lambda. Una expresión lambda consiste en la palabra clave lambda seguida de una lista de argumentos, dos puntos y una única expresión (“expression”). En cuanto se llama la función lambda, se proporciona la expresión con los argumentos y se evalúa:
@@ -254,7 +255,7 @@ funciones que reciben por parametro otra funcion
 `int(input("ingrese un numero:))`
 Una función de callback es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción.
 
-Ejemplo:
+# Ejemplo:
 
 JS
 Copy to Clipboard
@@ -304,11 +305,12 @@ toUpperCaseFirstWord('Hello World') // HELLO
     return minimo
 # programacion funcional
 min(lista)
-```
+
 #### AVERIGUAR SOBRE MAP(). FILTER(), REDUCE()
 
 ### MAP():
 Los Map en Javascript son estructuras de datos nativas que permiten implementar una estructura de tipo mapa, es decir, una estructuras donde tiene valores guardados a través de una clave para identificarlos. Comúnmente, esto se denomina pares clave-valor.
+
 ```
 ##EJEMPLO:
 
@@ -321,10 +323,12 @@ En este ejemplo, creamos un elemento map, que no es más que un mapa de pares cl
 Clave:  1 => Valor:  "uno"
 Clave:  2 => Valor:  "dos"
 Clave:  3 => Valor:  "tres"
+```
 
 ### FILTER():
 
 Tal como su nombre indica filter significa filtrar, y es una de mis funciones favoritas, ya que a partir de una lista o iterador y una función condicional, es capaz de devolver una nueva colección con los elementos filtrados que cumplan la condición.
+
 ```
 #ejemplo:
 
@@ -352,13 +356,14 @@ list( filter(lambda numero: numero%5 == 0, numeros) )
 Así, en una sola línea hemos definido y ejecutado el filtro utilizando una función condicional anónima y una lista de numeros.
 ```
 ### REDUCE():
+
 El método de reducción en su forma más simple toma dos parámetros. El primer parámetro es una función, generalmente llamada reductora, que será llamada/invocada en cada valor del array. El segundo parámetro de reduce es el valor inicial que se utilizará en la función reductora.
 
 Ahora, la función reductora toma dos parámetros. El primer parámetro es el acumulador, que es el “valor” que irá atrapando el resultado de la función reductora, de modo que el acumulador será a lo que se reduzca el array. El segundo parámetro de la función reductora es el elemento actual en el array.
 
 Esto es, como habrás notado, bastante difícil de explicar en texto. Así que será mejor que veamos un ejemplo de código en el que intentamos obtener el precio total de una lista de artículos.
 ```
-#ejemplo
+# ejemplo
 
 const items = [
   {nombre: "Arroz", precio: 5},
@@ -378,4 +383,147 @@ const reducer = function (total, item) {
 };
 const precioTotal = items.reduce(reducer, 0);
 console.log(precioTotal); // 135
+```
+## ACTIVIDAD
+## AVERIGUAR SOBRE MODULOS Y PAQUETES EN PYTHON.
 
+### MODULOS
+Un módulo es un archivo de Python cuyos objetos (funciones, clases, excepciones, etc.) pueden ser accedidos desde otro archivo. Se trata simplemente de una forma de organizar grandes códigos.
+
+Consideremos, por ejemplo, un archivo aritmetica.py que contenga las siguientes definiciones.
+
+def sumar(a, b):
+    return a + b
+
+def restar(a, b):
+    return a - b
+
+def mult(a, b):
+    return a * b
+
+def div(a, b):
+    return a / b
+Podemos acceder a ellas desde otro archivo de Python ubicado en la misma ruta importando el módulo.
+
+import aritmetica
+
+print(aritmetica.sumar(7, 5))
+Una sintaxis alternativa para importar objetos desde un módulo es la siguiente.
+
+from aritmetica import sumar
+
+print(sumar(7, 5))
+Nótese que, en este segundo caso, no se prefija el nombre del módulo al invocar al objeto importado. Podemos importar varios objetos separándolos por comas.
+
+from aritmetica import sumar, restar, mult, div
+
+print(sumar(7, 5))
+print(restar(7, 5))
+print(mult(7, 5))
+print(div(7, 5))
+O bien, para importar todos los objetos dentro de un módulo:
+
+from aritmetica import *
+Podemos hacer que un módulo esté visible para cualquier archivo ubicándolo en la carpeta Lib dentro del directorio de instalación de Python (p. ej. C:\Python310\Lib).
+## PAQUETES
+Un paquete es una carpeta que contiene varios módulos. Siguiendo el ejemplo anterior, podemos diseñar un paquete matematica creando una carpeta con la siguiente estructura.
+
+matematica/
+    |-- __init__.py
+    |-- aritmetica.py
+    |-- geometria.py
+Debe contener siempre un archivo __init__.py (por el momento vacío) para que Python entienda que se trata de un paquete y no de una simple carpeta. Así, podemos acceder a alguno de los módulos del paquete de la siguiente manera.
+
+import matematica.aritmetica
+
+print(matematica.aritmetica.sumar(7, 5))
+O bien de la siguiente.
+
+from matematica import aritmetica
+
+print(aritmetica.sumar(7, 5))
+También, esta otra:
+
+from matematica.aritmetica import sumar
+
+print(sumar(7, 5))
+Python incluye una inmensa cantidad de módulos y paquetes en su instalación (aún más grande es aquella desarrollada por la comunidad, de la que hablaremos más adelante), a los que se conoce como librería estándar. Ahora que sabemos cómo trabajar con ellos, sopesemos esta cuestión.
+
+## DIFERENCIAS ENTRE MODULOS Y PAQUETES.
+
+En Python, los términos "módulos" y "paquetes" son fundamentales para organizar y estructurar el código de un programa de manera eficiente. Aquí te explico las diferencias entre ambos con ejemplos:
+ 
+Módulos en Python:
+ 
+- Un módulo en Python es un archivo que contiene definiciones y declaraciones de Python. Puede contener funciones, clases y variables.
+- Los módulos permiten organizar el código de forma modular para facilitar su reutilización y mantenimiento.
+- Para utilizar un módulo en Python, se puede importar utilizando la palabra clave  import .
+ 
+Ejemplo de un módulo en Python llamado  mimodulo.py :
+ 
+python
+ Copiar
+# mimodulo.py
+def saludar(nombre):
+    print(f"Hola, {nombre}!")
+
+def sumar(a, b):
+    return a + b
+ 
+ 
+Paquetes en Python:
+ 
+- Un paquete en Python es una colección de módulos relacionados que se almacenan en un directorio.
+- Los paquetes permiten organizar y estructurar el código de manera jerárquica.
+- Para indicar que un directorio es un paquete en Python, debe contener un archivo especial llamado  _init_.py .
+ 
+Ejemplo de un paquete en Python llamado  mipaquete  que contiene los módulos  modulo1.py  y  modulo2.py :
+ 
+
+ Copiar
+mipaquete/
+    _init_.py
+    modulo1.py
+    modulo2.py
+ 
+ 
+Contenido del archivo  modulo1.py :
+ 
+python
+ Copiar
+# modulo1.py
+def restar(a, b):
+    return a - b
+ 
+ 
+Contenido del archivo  modulo2.py :
+ 
+python
+ Copiar
+# modulo2.py
+def multiplicar(a, b):
+    return a * b
+ 
+ 
+Para importar y utilizar los módulos y paquetes en Python, se pueden realizar las siguientes operaciones:
+ 
+python
+ Copiar
+# Importar un módulo
+import mimodulo
+
+mimodulo.saludar("Cici")
+resultado = mimodulo.sumar(3, 5)
+print(resultado)
+
+# Importar un módulo desde un paquete
+from mipaquete import modulo1
+
+resultado_resta = modulo1.restar(10, 3)
+print(resultado_resta)
+
+# Importar un paquete y un módulo desde el paquete
+from mipaquete import modulo2
+
+resultado_multiplicacion = modulo2.multiplicar(4, 6)
+print(resultado_multiplicacion)
