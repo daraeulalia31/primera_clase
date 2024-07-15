@@ -384,7 +384,8 @@ const reducer = function (total, item) {
 const precioTotal = items.reduce(reducer, 0);
 console.log(precioTotal); // 135
 ```
-## ACTIVIDAD
+### ACTIVIDAD
+
 ## AVERIGUAR SOBRE MODULOS Y PAQUETES EN PYTHON.
 
 ### MODULOS
