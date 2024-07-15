@@ -9,5 +9,15 @@ print(suma(4,7))
 def resta(a+b):
     """funcion para restar dos numeros"""
     return a-b
+def producto(a.b):
+    """funciones de producto"""
+    return a*b
+mensaje:str="hola"
 
+#importacion directa
+
+import operaciones
+suma: int=operaciones.suma(7,8)
+msj:str=operaciones.mensaje
+print(suma)
 
