@@ -16,7 +16,7 @@ en programacion una funcion es un subprograma, es una estrutura que nos permite 
 para definir una funcion en paython primero utilizaremos la palabra reservada "def" seguida po el "nombre" de la funcion. a 
 continuacionespecificaremos los "parametros" con "()" si es una funcion con parametros, si se tuviera ,as de un parametros
 iran separados por ",", finalizando la linea con ":", en la siguiente linea sin olvidar el identado, comenzara el "cuerpo"
-de la funcion (micro progrma) que puede contener 1 o mas sentencias, finalmente devera "retornar" un resultado con la palabra
+de la funcion (micro programa) que puede contener 1 o mas sentencias, finalmente devera "retornar" un resultado con la palabra
 ´return´.
 [!INFO]
 como retorno tambien se puede utilizar la "funcion interna". "print ()", ´para depuracion de codigo no es recomendable usarlo en produccion.
@@ -78,7 +78,7 @@ def sqrtr(valor):
 # NOTA: en este caso, el valor 4 es un argumento de la funcion
 sqrt(4)
 ```
-cuando lo llamamos una funcion con 'argumentos', los valores de estos atgumentos se copian en 
+cuando lo llamamos una funcion con 'argumentos', los valores de estos argumentos se copian en 
 los correspondientes 'parametros' dentro de la funcion
 ```python
 def ejem(a,b,c):
@@ -86,7 +86,7 @@ def ejem(a,b,c):
     ejem(4,5,6)
 ```
 ### ARGUMENTOS NOMINALEA
-en est aproximacion loa argumentos no son copiados en un orden especifico sino que 
+en esta aproximacion loa argumentos no son copiados en un orden especifico sino que 
 **se asiganan por nombre a cada parametro**. ellos nos permite evitar el problema de 
 conocer o recordar cual es el orden de los parametros de la defincion de la funcion.
 Para utilizarlo, basta con realizar una asignacion de cada argumemto en la propia 
@@ -216,7 +216,7 @@ Estas son solo algunas de las muchas funciones internas útiles que Python propo
 `lambda:"hola"
 El término “función lambda” significa función anónima en Python. Para crear una función lambda, Python utiliza la palabra clave lambda. Una expresión lambda consiste en la palabra clave lambda seguida de una lista de argumentos, dos puntos y una única expresión (“expression”). En cuanto se llama la función lambda, se proporciona la expresión con los argumentos y se evalúa:
 
-lambda argument: expression
+### lambda argument: expression
 Las funciones son una construcción lingüística fundamental de casi todos los lenguajes de programación y representan la unidad más pequeña de código reutilizable. Normalmente, las funciones en Python se definen con la palabra clave def. Por ejemplo, este también sería el caso de la función square que multiplica un número por sí mismo:
 
 # Define square function
@@ -312,7 +312,7 @@ min(lista)
 Los Map en Javascript son estructuras de datos nativas que permiten implementar una estructura de tipo mapa, es decir, una estructuras donde tiene valores guardados a través de una clave para identificarlos. Comúnmente, esto se denomina pares clave-valor.
 
 ```
-##EJEMPLO:
+## EJEMPLO:
 
 const map = new Map();                                        // Map({}) (Mapa vacío)
 const map = new Map([[1, "uno"]]);                            // Map({ 1=>"uno" })
@@ -330,7 +330,7 @@ Clave:  3 => Valor:  "tres"
 Tal como su nombre indica filter significa filtrar, y es una de mis funciones favoritas, ya que a partir de una lista o iterador y una función condicional, es capaz de devolver una nueva colección con los elementos filtrados que cumplan la condición.
 
 ```
-#ejemplo:
+## ejemplo:
 
 ef multiple(numero):    # Primero declaramos una función condicional
     if numero % 5 == 0:  # Comprobamos si un numero es múltiple de cinco
