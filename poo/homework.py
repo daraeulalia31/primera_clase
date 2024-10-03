@@ -48,3 +48,4 @@ eulalia=agencia("eulalia","tito olivares",7446489,122,"2024/12/22")
 print(eulalia.ingresar_destino())
 eulalia.ingresar_origen("puquio")
 
+
