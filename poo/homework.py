@@ -29,7 +29,7 @@ print(carlos.retirar())
 
 class agencia:
     #atributos
-    def _init_(self,nombre,apellidos,dni,numero_asiento,fecha_viaje):
+    def __init__(self,nombre,apellidos,dni,numero_asiento,fecha_viaje):
         self.nombre=nombre
         self.apellidos=apellidos
         self.dni=dni
@@ -37,15 +37,14 @@ class agencia:
         self.fecha_viaje=fecha_viaje
     #metodos
     def ingresar_origen(self,lugar):
-        print("estoy ingresando de donde viajo:",lugar)
+        print("estoy ingresando mis datos:",lugar)
     def ingresar_destino(self):
-        print("estoy ingresando de donde voy")
+        print("estoy ingresando para donde ir")
     def cancelar_viaje(self):
-        print("estoy cancelando mi viaje ")
+        print("estoy cancelando mi pasaje")
     def ver_estado_pasaje(self):
-        print("estoy viendo el estado de mi pasaje")
+        print("estoy llegando a mi destino")
 eulalia=agencia("eulalia","tito olivares",7446489,122,"2024/12/22")
 print(eulalia.ingresar_destino())
 eulalia.ingresar_origen("puquio")
-
 
